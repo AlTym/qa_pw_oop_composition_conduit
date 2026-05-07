@@ -18,7 +18,6 @@ test('View article in Global Feed tab', async ({
 
   await externalHomePage.open();
   await externalHomePage.globalFeed.assertTabLinkVisible();
-  // await pages[1].reload();
   await externalHomePage.globalFeed.articleFeedItem.
   assertArticleTitleContainText(articleWithoutTags.title);
 });

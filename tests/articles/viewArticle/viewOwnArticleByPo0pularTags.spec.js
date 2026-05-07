@@ -20,8 +20,8 @@ test('View own article by Popular Tags', async ({
   await internalViewArticlePage.internalHeader.clickHomeLink();
   await page.reload();
   await internalHomePage.yourFeed.assertTabLinkVisible();
-  await internalHomePage.popularTags.clickTagOnPopularTags(
-    articleWithOneTag.tags[0]);
+  await internalHomePage.popularTags.
+    clickTagOnPopularTags(articleWithOneTag.tags[0]);
   await internalHomePage.tagFeedTab.articleFeedItem.
     assertArticleTitleContainText(articleWithOneTag.title);
 });
