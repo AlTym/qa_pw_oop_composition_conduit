@@ -5,12 +5,14 @@ export class ArticleFeedItem extends BaseComponent {
   constructor(page, userId = 0) {
     super(page, userId);
     this.articleTitle = page.getByRole(
+      'header', {name: "Article title:"}).first();
+    this.articleTitleLink = page.getByRole(
       'link', {name: "Article title:"}).first();
   }
 
   async clickOnArticle() {
     await this.step(`Click on first article`, async () => {
-      await this.articleTitle.click();
+      await this.articleTitleLink.click();
     })
   }
 

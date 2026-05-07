@@ -11,7 +11,7 @@ export class ExternalViewArticlePage extends BaseViewArticlePage {
 
     async assertArticleTitleContainText(name) {
       await this.step(`Assert first article have ${name} title`, async () => {
-        await expect(this.articleTitle).toHaveText(name);
+        await expect(this.articleTitleHeader).toHaveText(name);
       });
     }
 }
